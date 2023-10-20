@@ -29,7 +29,7 @@ db.once('open', () => {
 
 // Define routes
 app.use("/api/todos", require('./Routes/todoRoutes'));
-app.use("/api/auth/login", require('./Routes/authRoutes'));
+app.use("/api/user/login", require('./Routes/authRoutes'));
 app.use("/api/user/register", require('./Routes/userRoutes'));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));

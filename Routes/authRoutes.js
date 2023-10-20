@@ -98,10 +98,10 @@ router.post("/", async (req, res) => {
         }
 
         // If email and password are correct, generate a token
-        const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET);
+        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET); // Use your secret
 
-        // Send a success response
-        res.status(200).send({ data: token, message: "Logged in successfully" });
+        // Send the token as part of the response
+        res.status(200).json({ data: token, message: 'Logged in successfully' });
     } catch (error) {
         console.error("Error:", error); // Log the error for debugging
         res.status(500).send({ message: "Internal server error" });
