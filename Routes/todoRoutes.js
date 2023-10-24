@@ -52,14 +52,14 @@ const Todo = require('../Models/Todo');
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Todo'
+ *               type: object
  *     responses:
  *       201:
  *         description: Todo created successfully
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Todo'
+ *               type: object
  *       400:
  *         description: Bad request, check the request body
  *         content:
@@ -88,7 +88,7 @@ const Todo = require('../Models/Todo');
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Todo'
+ *               type: object
  *       404:
  *         description: Todo not found
  *       400:
@@ -145,14 +145,14 @@ const Todo = require('../Models/Todo');
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Todo'
+ *               type: object
  *     responses:
  *       200:
  *         description: Todo updated successfully
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Todo'
+ *               type: object
  *       404:
  *         description: Todo not found
  *       400:
